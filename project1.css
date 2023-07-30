@@ -1,0 +1,172 @@
+@import url("fontawesome-free-5.15.4-desktop/");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin:0;
+    font-family: monospace;
+    background: linear-gradient(90deg, rgb(222, 135, 14) ,rgb(0, 0, 0),rgb(222, 135, 14));
+    color: rgb(6, 6, 6);
+    padding:40px;
+    font-size: large;
+}
+
+.container{
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lgn-lft{
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 150px;
+}
+.lgn-rht{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 80%;
+    }
+}
+
+.lgn-head{
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: medium;
+    h1{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    p{
+        opacity: .7px;
+    }
+}
+form lgn-form{
+    margin-bottom: 40px;
+}
+#please{
+    font-family: cursive;
+    font-size: x-large;
+}
+
+
+.lgn-form{
+    width: 450px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &-footer {
+        display: flex;
+        gap:30px;
+        margin-top: 70px;
+        a{
+            flex: 6;
+            gap:15px;
+            padding: .6rem;
+            justify-content: center;
+            color:black;
+            text-decoration: none;
+        }
+    }
+}
+
+.lgn-form-content{
+    margin-top: 1px;
+    margin-bottom: 25px;
+}
+
+.email,
+.password{
+    margin-top: 14px;
+}
+
+.form-item label::not(.checkboxLabel) {
+    display: inline-block;
+    background-color: white;
+    /* margin-bottom: 10px;
+    position: absolute;
+    padding: 0 10px;
+    transform: translate(30px, -10px);
+    font-size: 14px; */
+}
+
+input[type='text'],
+input[type='password']{
+    border:1px solid black;
+    border-radius: 100px;
+    height: 45px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 1rem;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#submit-button{
+    margin-top: 35px;
+    background: linear-gradient(90deg,rgb(255, 166, 0),black);
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+}
+
+#submit-button :hover{
+    background-color: white;
+    animation-name: submit-button;
+    animation-duration: .4s;
+    animation-delay: .5s;
+    @keyframes submit-button {
+        opacity: .7px;
+        letter-spacing: 3px;
+        word-spacing: 4px;
+        
+    }
+}
+#fb-logo{
+    box-shadow: 3px 2px 2px black;
+    border:1px solid black
+}
+#ggl-logo{
+    margin-left: 50px;
+    box-shadow: 3px 2px 2px black;
+    border:1px solid black
+}
+
+@media  (max-width: 600px) {
+    body{
+        background: linear-gradient(90deg, red,black);
+    }
+}
+@media  (max-width: 1380px){}
+@media  (max-width: 768px){}
+#fb-logo,
+#ggl-logo{
+    display:inline-block;  
+}
